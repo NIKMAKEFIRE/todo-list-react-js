@@ -1,0 +1,77 @@
+.list {
+    &__add-popup {
+        width: 240px;
+        height: 150px;
+        background-color: #fff;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 18px;
+    }
+
+    &__add-input {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #efefef;
+        border-radius: 4px;
+        padding: 8px 12px;
+
+        &:focus {
+            border-color: #dbdbdb;
+        }
+    }
+
+    &__popup-colors {
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+
+    &.active{
+        border: 2px solid #525252;
+    }
+
+        &--green{
+            background-color: #42B883;
+        }
+    
+        &--blue{
+            background-color: #64C4ED;
+        }
+        
+        &--pink{
+            background-color: #FFBBCC;
+        }
+    
+        &--grey{
+            background-color: #C9D1D3;
+        }
+    
+        &--lime{
+            background-color: #B6E6BD;
+        }
+    
+        &--purple{
+            background-color: #C355F5;
+        }
+    
+        &--black{
+            background-color: #110133;
+        }
+    
+        &--red{
+            background-color: #FF6464;
+        }
+        
+    
+    }
+    
