@@ -22,4 +22,4 @@ const List = ({ items, isRemovable, onClick }) => {
     )
 }
 
-export default List
+export default List 

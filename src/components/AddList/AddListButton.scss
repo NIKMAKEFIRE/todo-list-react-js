@@ -6,6 +6,9 @@
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
         padding: 18px;
+        position: relative;
+        top: -25px;
+        left: 10px;
     }
 
     &__add-input {
@@ -25,6 +28,13 @@
         display: flex;
         justify-content: space-between;
     }
+
+    &__popup-close-btn {
+        position: absolute;
+        right: -8px;
+        top: -5px;
+        cursor: pointer;
+    }
 }
 
 .button {
@@ -35,43 +45,41 @@
 .badge {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 
-    &.active{
+    &.active {
         border: 2px solid #525252;
     }
 
-        &--green{
-            background-color: #42B883;
-        }
-    
-        &--blue{
-            background-color: #64C4ED;
-        }
-        
-        &--pink{
-            background-color: #FFBBCC;
-        }
-    
-        &--grey{
-            background-color: #C9D1D3;
-        }
-    
-        &--lime{
-            background-color: #B6E6BD;
-        }
-    
-        &--purple{
-            background-color: #C355F5;
-        }
-    
-        &--black{
-            background-color: #110133;
-        }
-    
-        &--red{
-            background-color: #FF6464;
-        }
-        
-    
+    &--green {
+        background-color: #42b883;
     }
-    
+
+    &--blue {
+        background-color: #64c4ed;
+    }
+
+    &--pink {
+        background-color: #ffbbcc;
+    }
+
+    &--grey {
+        background-color: #c9d1d3;
+    }
+
+    &--lime {
+        background-color: #b6e6bd;
+    }
+
+    &--purple {
+        background-color: #c355f5;
+    }
+
+    &--black {
+        background-color: #110133;
+    }
+
+    &--red {
+        background-color: #ff6464;
+    }
+}
