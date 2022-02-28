@@ -6,11 +6,23 @@ import closeSvg from '../../assets/img/close.svg'
 
 import './AddListButton.scss'
 
-const AddList = ({ colors }) => {
+const AddList = ({ colors, onAdd }) => {
 
     const [visiblePopup, setVisiblePopup] = React.useState(false);
     const [selectedColor, setSelectedColor] = React.useState(colors[0].id);
     const [inputValue, setInputValue] = React.useState('');
+
+    const addList = () => {
+        if (!inputValue) {
+            alert('Введите название списка')
+            return
+        }
+        onAdd({
+            "id": Math.random(),
+            "name": inputValue,
+            "colorId": selectedColor
+        });
+    }
 
     return (
         <>
@@ -26,17 +38,17 @@ const AddList = ({ colors }) => {
             />
             {visiblePopup && (<div className="list__add-popup">
                 <img
-                onClick={() => setVisiblePopup(false)}
-                src={closeSvg} 
-                alt="Close button" 
-                className="list__popup-close-btn" />
+                    onClick={() => setVisiblePopup(false)}
+                    src={closeSvg}
+                    alt="Close button"
+                    className="list__popup-close-btn" />
 
-                <input 
-                value={inputValue} 
-                onChange={e => console.log(e)}
-                className="list__add-input" 
-                type="text" 
-                placeholder="Название списка" />
+                <input
+                    value={inputValue}
+                    onChange={e => setInputValue(e.target.value)}
+                    className="list__add-input"
+                    type="text"
+                    placeholder="Название списка" />
 
                 <div className="list__popup-colors">
                     {
@@ -48,7 +60,7 @@ const AddList = ({ colors }) => {
                             />
                         ))}
                 </div>
-                <button className="button">Добавить</button>
+                <button onClick={addList} className="button">Добавить</button>
             </div>
             )}
         </>
