@@ -1,11 +1,13 @@
 .list {
+    $self: &;
+
     margin-bottom: 30px;
 
-    &__add-button{
+    &__add-button {
         opacity: 0.6;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
 
-        &:hover{
+        &:hover {
             opacity: 1;
             color: #000;
         }
@@ -17,8 +19,24 @@
         padding: 10px 12px;
         cursor: pointer;
 
-        &:hover{
-            background-color: rgba(255,255,255, 0.5);
+        &:hover #{$self}__remove-icon{
+            opacity: 0.2;
+        }
+
+        #{$self}__remove-icon {
+            opacity: 0;
+    
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+
+        span {
+            flex: 1;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
         }
 
         &.active {
@@ -35,24 +53,23 @@
     span {
         padding-left: 10px;
     }
-
 }
 
-.button{
+.button {
     background-color: #4dd599;
     border-radius: 4px;
     color: #fff;
     border: 0;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
 
-    &:hover{
-        background: darken(#4dd599,10%)
+    &:hover {
+        background: darken(#4dd599, 10%);
     }
 
-    &:active{
-        background: darken(#4dd599,20%)
+    &:active {
+        background: darken(#4dd599, 20%);
     }
 }
